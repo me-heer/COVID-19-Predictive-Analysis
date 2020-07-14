@@ -1,0 +1,4 @@
+db.sqlite3
+__pycache__/*
+analysis/__pycache__/*
+covid_analysis/__pycache__/*
