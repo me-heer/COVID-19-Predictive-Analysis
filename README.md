@@ -12,4 +12,6 @@
 # Requirements:
 - Facebook Prophet (https://facebook.github.io/prophet/docs/installation.html)
 - Pystan (Prophet dependency)
+- plotly
+- Pandas
 
