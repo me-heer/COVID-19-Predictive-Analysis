@@ -17,4 +17,4 @@ install:
   - conda install -c conda-forge fbprophet
   - conda activate test-environment
 script:
-  - pytest
+  - python manage.py test
