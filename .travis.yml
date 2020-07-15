@@ -20,6 +20,6 @@ install:
 services:
   - mysql
 before_script:
-  - mysql -e 'CREATE DATABASE analysis;' -u  root
+  - mysql -e 'CREATE DATABASE analysis;' -u root
 script:
   - python manage.py test
