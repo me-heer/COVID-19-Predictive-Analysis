@@ -12,7 +12,9 @@ install:
   # Useful for debugging any issues with conda
   - conda info -a
 
-  - conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION numpy pandas pystan fbprophet
+  - conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION 
+  - conda install gcc numpy pandas pystan
+  - conda install -c conda-forge fbprophet
   - conda activate test-environment
 script:
   - pytest
