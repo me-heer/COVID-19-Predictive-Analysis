@@ -17,5 +17,9 @@ install:
   - conda install -c conda-forge fbprophet
   - pip install django
   - pip install mysqlclient
+services:
+  - mysql
+before_script:
+  - mysql -e 'CREATE DATABASE analysis;' -u  root
 script:
   - python manage.py test
