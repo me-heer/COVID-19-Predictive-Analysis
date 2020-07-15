@@ -16,5 +16,6 @@ install:
   - conda install numpy pandas pystan
   - conda install -c conda-forge fbprophet
   - pip install django
+  - pip install mysqlclient
 script:
   - python manage.py test
