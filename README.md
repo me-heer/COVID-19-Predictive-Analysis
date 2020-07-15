@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/mformihir/COVID-19-Predictive-Analysis.svg?token=SHCD8xTDhUdFdgg3RAu9&branch=master)](https://travis-ci.com/mformihir/COVID-19-Predictive-Analysis)
 # Running the server:
 - cd into the root directory of the project.
 
