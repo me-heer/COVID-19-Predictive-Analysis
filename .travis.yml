@@ -15,6 +15,7 @@ install:
   - conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION 
   - conda install numpy pandas pystan
   - conda install -c conda-forge fbprophet
+  - conda install -c anaconda django
   - conda activate test-environment
 script:
   - python manage.py test
