@@ -13,9 +13,9 @@ install:
   - conda info -a
 
   - conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION 
-  - conda install numpy pandas pystan
-  - conda install -c conda-forge fbprophet
-  - pip install django
+  - conda install pystan
+  #- conda install -c conda-forge fbprophet
+  - pip install django mysqlclient fbprophet pandas numpy
   - pip install mysqlclient
 services:
   - mysql
