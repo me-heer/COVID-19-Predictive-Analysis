@@ -15,4 +15,5 @@
 - Pystan (Prophet dependency)
 - plotly
 - Pandas
+- APScheduler
 
