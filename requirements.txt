@@ -1,4 +1,0 @@
-pystan
-fbprophet
-numpy
-pandas
