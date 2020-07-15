@@ -22,4 +22,4 @@ services:
 before_script:
   - mysql -e 'CREATE DATABASE analysis;' -u root
 script:
-  - python manage.py test
+  - python3 manage.py test
