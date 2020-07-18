@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.com/mformihir/COVID-19-Predictive-Analysis.svg?token=SHCD8xTDhUdFdgg3RAu9&branch=master)](https://travis-ci.com/mformihir/COVID-19-Predictive-Analysis)
 
 # Installing Prerequisites:
-- `conda install pystan`
+- `conda install pystan` (fbprophet prerequisite)
 - `pip install django mysqlclient fbprophet pandas numpy apscheduler`
 
 # Running the server:
