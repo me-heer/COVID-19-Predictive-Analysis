@@ -8,6 +8,7 @@ before_install:
 - docker-compose up -d
 script:
 - docker-compose run web python manage.py test
+- docker-compose run web python manage.py migrate
 deploy:
   provider: script
   script: bash scripts/deploy.sh
