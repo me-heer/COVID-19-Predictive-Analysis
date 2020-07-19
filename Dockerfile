@@ -1,9 +1,7 @@
 FROM python:3.7
 ENV PYTHONUNBUFFERED 1
 
-RUN mkdir /covid_analysis
-WORKDIR /covid_analysis/
-COPY requirements.txt /covid_analysis/
+WORKDIR /covid_analysis
+ADD ./requirements.txt /covid_analysis/requirements.txt
 RUN pip install -r requirements.txt
-
-COPY . .
+ADD . /covid_analysis
