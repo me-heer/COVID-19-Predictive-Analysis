@@ -8,3 +8,10 @@ before_install:
   - docker-compose up -d
 script:
   - docker-compose run web python manage.py test
+deploy:
+  provider: heroku
+  api_key:
+    secure: "EBE1537D416296D22C33F7593E970F20C70537F65204EE88619C96220E3B4A84,330E598E0096A20AB927B3E07F17BCF237EF98008B00A6C75CB5EF5FF11D3A83"
+  app: covid-analysis-mformihir
+  on: master
+  run: "python manage.py runserver"
