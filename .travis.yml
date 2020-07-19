@@ -15,7 +15,7 @@ before_install:
 script:
 - docker-compose run web python manage.py test
 - docker tag covid-19-predictive-analysis_web registry.heroku.com/covid-analysis-mformihir/web
-- docker tag covid-19-predictive-analysis_db registry.heroku.com/covid-analysis-mformihir/db
+#- docker tag covid-19-predictive-analysis_db registry.heroku.com/covid-analysis-mformihir/db
 deploy:
   provider: script
   script: 
