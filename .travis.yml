@@ -1,17 +1,15 @@
 language: python
 python:
-  - "3.7"
+- '3.7'
 services:
-  - docker
+- docker
 before_install:
-  - docker-compose build
-  - docker-compose up -d
+- docker-compose build
+- docker-compose up -d
 script:
-  - docker-compose run web python manage.py test
+- docker-compose run web python manage.py test
 deploy:
-  provider: heroku
+  provider: script
+  script: bash scripts/deploy.sh
   api_key:
-    secure: "EBE1537D416296D22C33F7593E970F20C70537F65204EE88619C96220E3B4A84,330E598E0096A20AB927B3E07F17BCF237EF98008B00A6C75CB5EF5FF11D3A83"
-  app: covid-analysis-mformihir
-  on: master
-  run: "python manage.py runserver"
+    secure: fqu5jSNd3FAqDFvreDhiSag8qGY/fnTuMnYKeIRFDeA8BN9+3NU9wvF7Zl149AMQXyC63czmbrO0cNprqaKWSW9wpxxbCCkseqTufVYcoOso7HjEoydhKj41Hb2uLN5BXD5mOC5SyH+itaEzots7Mr0S3Qr0kzT51J0s+7HGhfNjjqucdYrBQ6Us4ohr598qX8/ct4wrsV1luEz26so7yvKC99iPOnafeTfAEusKIYV2TtdeFSCP58ffqLRErLNrmneXNVd3nFRXnkCCjdLExAgcLYsabw2y179/L4ukMeGLTvXOGE+q3SkCNLALlcFh2vqwzF5SedDvFeEXkvKQeAVpv+o0VMiCH1RggFDx+FOugJccGyisqeG9PcTPvMMxg8RtYXL1+2zxWF57OML+7uSX31LVUM+GSk2OdrKawGjtVtUk+f8aYY26IX/901MnSLLCujcNU3m60X//EWxH3zN7YJ3ZeYwmitzZ9VPqrDw2MraH0kyGAe3Gfx0+Z3Omybg0lcGTMEY3k37rkgS80M0Bh1vQRKDc9Ix1594MOLyaMlpYtTXYvi70bHsEbDsGwqbKMMfx26LIqMK1xT7GRVd+Pz94/fyrvac6gqMyzmVyBK21Vzo9RUQ/ADEfd4Cj3cm+Tj4jS2F1/DLnTmWCXzAwwLsAKGEDH1j5+WW1s3w=
