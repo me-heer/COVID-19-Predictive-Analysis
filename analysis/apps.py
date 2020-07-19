@@ -12,4 +12,4 @@ class AnalysisConfig(AppConfig):
         logger = logging.getLogger(__name__)
         logger.warning("STARTING SCHEDULER")
         from scheduler import update
-        update.start()
+        #update.start()
