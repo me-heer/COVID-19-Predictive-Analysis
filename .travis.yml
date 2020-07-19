@@ -10,8 +10,8 @@ before_install:
 # install heroku CLI 
 - wget -qO- https://toolbelt.heroku.com/install.sh | sh
 # login to docker registries (dockerhub + heroku) 
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin 
-- echo "$HEROKU_PASSWORD" | docker login -u "$HEROKU_USERNAME" --password-stdin registry.heroku.com
+#- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin 
+- docker login -u "$HEROKU_USERNAME" --password=$(heroku auth:token) registry.heroku.com
 script:
 - docker-compose run web python manage.py test
 - docker tag covid-19-predictive-analysis_web registry.heroku.com/covid-analysis-mformihir/web
