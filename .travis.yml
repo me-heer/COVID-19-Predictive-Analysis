@@ -8,23 +8,24 @@ before_install:
 - docker-compose build
 - docker-compose up -d
 # install heroku CLI 
-#- wget -qO- https://toolbelt.heroku.com/install.sh | sh
+- wget -qO- https://toolbelt.heroku.com/install.sh | sh
 # login to docker registries (dockerhub + heroku) 
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin 
-#- docker login -u "$HEROKU_USERNAME" --password=$(heroku auth:token) registry.heroku.com
+- docker login -u "$HEROKU_USERNAME" --password=$(heroku auth:token) registry.heroku.com
 script:
 - docker-compose run web python manage.py test
 - docker ps
-- docker tag covid-19-predictive-analysis_web mformihir/covid-analysis-mformihir:web
-- docker tag mysql:5.7 mformihir/covid-analysis-mformihir:db
+- docker tag covid-19-predictive-analysis_web registry.heroku.com/covid-analysis-mformihir/web
+- docker tag mysql:5.7 registry.heroku.com/covid-analysis-mformihir/db
 deploy:
   provider: script
   script: 
-    docker push mformihir/covid-analysis-mformihir:web;
-    docker push mformihir/covid-analysis-mformihir:db;
-    #heroku container:release web --app covid-analysis-mformihir
-    #heroku run python3 manage.py migrate --app covid-analysis-mformihir
+    docker push registry.heroku.com/covid-analysis-mformihir/web;
+    docker push registry.heroku.com/covid-analysis-mformihir/db;
+    heroku container:release web --app covid-analysis-mformihir
+    heroku container:release db --app covid-analysis-mformihir
+    heroku run python3 manage.py migrate --app covid-analysis-mformihir
   #api_key:
     #secure: fqu5jSNd3FAqDFvreDhiSag8qGY/fnTuMnYKeIRFDeA8BN9+3NU9wvF7Zl149AMQXyC63czmbrO0cNprqaKWSW9wpxxbCCkseqTufVYcoOso7HjEoydhKj41Hb2uLN5BXD5mOC5SyH+itaEzots7Mr0S3Qr0kzT51J0s+7HGhfNjjqucdYrBQ6Us4ohr598qX8/ct4wrsV1luEz26so7yvKC99iPOnafeTfAEusKIYV2TtdeFSCP58ffqLRErLNrmneXNVd3nFRXnkCCjdLExAgcLYsabw2y179/L4ukMeGLTvXOGE+q3SkCNLALlcFh2vqwzF5SedDvFeEXkvKQeAVpv+o0VMiCH1RggFDx+FOugJccGyisqeG9PcTPvMMxg8RtYXL1+2zxWF57OML+7uSX31LVUM+GSk2OdrKawGjtVtUk+f8aYY26IX/901MnSLLCujcNU3m60X//EWxH3zN7YJ3ZeYwmitzZ9VPqrDw2MraH0kyGAe3Gfx0+Z3Omybg0lcGTMEY3k37rkgS80M0Bh1vQRKDc9Ix1594MOLyaMlpYtTXYvi70bHsEbDsGwqbKMMfx26LIqMK1xT7GRVd+Pz94/fyrvac6gqMyzmVyBK21Vzo9RUQ/ADEfd4Cj3cm+Tj4jS2F1/DLnTmWCXzAwwLsAKGEDH1j5+WW1s3w=
-  #app: covid-analysis-mformihir
-  #on: master
+  app: covid-analysis-mformihir
+  on: master
