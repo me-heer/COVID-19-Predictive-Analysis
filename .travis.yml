@@ -16,7 +16,7 @@ script:
 - docker-compose run web python manage.py test
 - docker ps
 - docker tag covid-19-predictive-analysis_web mformihir/covid-analysis-mformihir:web
-- docker tag mysql mformihir/covid-analysis-mformihir:db
+- docker tag mysql:5.7 mformihir/covid-analysis-mformihir:db
 deploy:
   provider: script
   script: 
