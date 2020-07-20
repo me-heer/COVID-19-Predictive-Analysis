@@ -5,3 +5,7 @@ pandas==1.0.5
 apscheduler==3.6.3
 fbprophet==0.6
 mysqlclient==2.0.1
+psycopg2
+dj-database-url
+psycopg2-binary
+pillow
