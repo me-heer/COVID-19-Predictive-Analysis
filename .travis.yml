@@ -23,3 +23,6 @@ deploy:
     heroku container:release web --app covid-analysis-mformihir
     heroku run python3 manage.py migrate --app covid-analysis-mformihir
   app: covid-analysis-mformihir
+  on:
+    branch: heroku
+    
