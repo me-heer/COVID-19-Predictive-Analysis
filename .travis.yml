@@ -8,7 +8,8 @@ before_install:
 - docker-compose build
 - docker-compose up -d
 # install heroku CLI 
-- wget -qO- https://toolbelt.heroku.com/install.sh | sh
+#- wget -qO- https://toolbelt.heroku.com/install.sh | sh #old method
+- curl https://cli-assets.heroku.com/install.sh | sh #new method
 # login to docker registries (dockerhub + heroku) 
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin 
 - docker login -u "$HEROKU_USERNAME" --password=$(heroku auth:token) registry.heroku.com
