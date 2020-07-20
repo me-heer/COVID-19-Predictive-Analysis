@@ -7,8 +7,6 @@ services:
 before_install:
 - docker-compose build
 - docker-compose up -d
-# install heroku CLI 
-#- wget -qO- https://toolbelt.heroku.com/install.sh | sh #old method
 - curl https://cli-assets.heroku.com/install.sh | sh #new method
 # login to docker registries (dockerhub + heroku) 
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin 
@@ -17,14 +15,11 @@ script:
 - docker-compose run --entrypoint="python manage.py test" web
 - docker ps
 - docker tag covid-19-predictive-analysis_web registry.heroku.com/covid-analysis-mformihir/web
-#- docker tag mysql:5.7 registry.heroku.com/covid-analysis-mformihir/db
+
 deploy:
   provider: script
   script: 
     docker push registry.heroku.com/covid-analysis-mformihir/web;
-    #docker push registry.heroku.com/covid-analysis-mformihir/db;
     heroku container:release web --app covid-analysis-mformihir
-    #heroku container:release db --app covid-analysis-mformihir
     heroku run python3 manage.py migrate --app covid-analysis-mformihir
   app: covid-analysis-mformihir
-  on: heroku
