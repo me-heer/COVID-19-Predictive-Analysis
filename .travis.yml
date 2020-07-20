@@ -13,6 +13,7 @@ before_install:
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin 
 - docker login -u "$HEROKU_USERNAME" --password=$(heroku auth:token) registry.heroku.com
 script:
+- docker-compose run --entrypoint="python manage.py test" web
 - docker-compose run web python manage.py test
 - docker ps
 - docker tag covid-19-predictive-analysis_web registry.heroku.com/covid-analysis-mformihir/web
