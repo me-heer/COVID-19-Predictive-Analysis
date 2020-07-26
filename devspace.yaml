@@ -1,0 +1,40 @@
+version: v1beta9
+images:
+  app:
+    image: covid-analysis-mformihir
+    preferSyncOverRebuild: true
+    injectRestartHelper: true
+    appendDockerfileInstructions:
+    - USER root
+deployments:
+- name: covid-19-predictive-analysis
+  helm:
+    componentChart: true
+    values:
+      containers:
+      - image: covid-analysis-mformihir
+      service:
+        ports:
+        - port: 6969
+dev:
+  ports:
+  - imageName: app
+    forward:
+    - port: 6969
+  open:
+  - url: http://localhost:6969
+  sync:
+  - imageName: app
+    excludePaths:
+    - .git/
+    uploadExcludePaths:
+    - devspace.yaml
+    onUpload:
+      restartContainer: true
+profiles:
+- name: production
+  patches:
+  - op: remove
+    path: images.app.injectRestartHelper
+  - op: remove
+    path: images.app.appendDockerfileInstructions

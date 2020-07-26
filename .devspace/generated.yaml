@@ -1,0 +1,4 @@
+vars:
+  DEVSPACE_SPACE_DOMAIN1: covid.devspace.host
+profiles:
+  "": {}

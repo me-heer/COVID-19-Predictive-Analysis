@@ -1,0 +1,5 @@
+{"level":"info","msg":"Using kube context '\u001b[1;37mdevspace-covid\u001b[0m'","time":"2020-07-26T10:58:03+05:30"}
+{"level":"info","msg":"Using namespace '\u001b[1;37mcovid\u001b[0m'","time":"2020-07-26T10:58:03+05:30"}
+{"level":"info","msg":"Building image 'covid-analysis-mformihir:VJEuBPq' with engine 'docker'","time":"2020-07-26T10:58:10+05:30"}
+{"level":"info","msg":"Authentication successful (hub.docker.com)","time":"2020-07-26T10:58:15+05:30"}
+{"level":"fatal","msg":"Error building image: Error during image build: cannot inject restart helper into Dockerfile because neither ENTRYPOINT nor CMD was found.\n\nHow to fix this:\n- Option A: Define an ENTRYPOINT (or CMD) in your Dockerfile\n- Option B: Set `images.*.entrypoint` option in your devspace.yaml","time":"2020-07-26T10:58:15+05:30"}
