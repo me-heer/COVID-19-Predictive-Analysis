@@ -1,5 +1,73 @@
-{"level":"info","msg":"Using kube context '\u001b[1;37mdevspace-covid\u001b[0m'","time":"2020-07-26T10:58:03+05:30"}
-{"level":"info","msg":"Using namespace '\u001b[1;37mcovid\u001b[0m'","time":"2020-07-26T10:58:03+05:30"}
-{"level":"info","msg":"Building image 'covid-analysis-mformihir:VJEuBPq' with engine 'docker'","time":"2020-07-26T10:58:10+05:30"}
-{"level":"info","msg":"Authentication successful (hub.docker.com)","time":"2020-07-26T10:58:15+05:30"}
-{"level":"fatal","msg":"Error building image: Error during image build: cannot inject restart helper into Dockerfile because neither ENTRYPOINT nor CMD was found.\n\nHow to fix this:\n- Option A: Define an ENTRYPOINT (or CMD) in your Dockerfile\n- Option B: Set `images.*.entrypoint` option in your devspace.yaml","time":"2020-07-26T10:58:15+05:30"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdevspace-covid\u001b[0m'","time":"2020-07-26T11:07:10+05:30"}
+{"level":"info","msg":"Using namespace '\u001b[1;37mcovid\u001b[0m'","time":"2020-07-26T11:07:10+05:30"}
+{"level":"info","msg":"Building image 'dscr.io/mformihir/covid19predictiveanalysis:jYtP8nb' with engine 'docker'","time":"2020-07-26T11:07:15+05:30"}
+{"level":"info","msg":"Authentication successful (dscr.io)","time":"2020-07-26T11:07:19+05:30"}
+{"level":"warning","msg":"Using CMD statement for injecting restart helper because ENTRYPOINT is missing in Dockerfile and `images.*.entrypoint` is also not configured","time":"2020-07-26T11:07:19+05:30"}
+{"level":"info","msg":"Image pushed to registry (dscr.io)","time":"2020-07-26T11:13:34+05:30"}
+{"level":"info","msg":"Done processing image 'dscr.io/mformihir/covid19predictiveanalysis'","time":"2020-07-26T11:13:34+05:30"}
+{"level":"info","msg":"Deployed helm chart (Release revision: 0)","time":"2020-07-26T11:13:48+05:30"}
+{"level":"info","msg":"Successfully deployed covid-19-predictive-analysis with helm","time":"2020-07-26T11:13:48+05:30"}
+{"level":"info","msg":"Port forwarding started on 6969:6969","time":"2020-07-26T11:14:45+05:30"}
+{"level":"info","msg":"Sync started on /home/mformihir/covid-predictive-analysis/django-projects/COVID-19-Predictive-Analysis \u003c-\u003e . (Pod: covid/covid-19-predictive-analysis-5d644c895b-vmbrr)","time":"2020-07-26T11:15:55+05:30"}
+{"level":"info","msg":"Opening 'http://localhost:6969' as soon as application will be started (timeout: 4m0s)","time":"2020-07-26T11:15:55+05:30"}
+{"level":"info","msg":"DevSpace UI available at: \u001b[1;37mhttp://localhost:8090\u001b[0m","time":"2020-07-26T11:15:55+05:30"}
+{"level":"info","msg":"Starting log streaming for containers that use images defined in devspace.yaml\n","time":"2020-07-26T11:15:57+05:30"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdevspace-covid\u001b[0m'","time":"2020-07-26T11:23:01+05:30"}
+{"level":"info","msg":"Using namespace '\u001b[1;37mcovid\u001b[0m'","time":"2020-07-26T11:23:01+05:30"}
+{"level":"info","msg":"Skip building image 'app'","time":"2020-07-26T11:23:07+05:30"}
+{"level":"info","msg":"Skipping deployment covid-19-predictive-analysis","time":"2020-07-26T11:23:09+05:30"}
+{"level":"info","msg":"Port forwarding started on 6969:6969","time":"2020-07-26T11:23:11+05:30"}
+{"level":"info","msg":"Sync started on /home/mformihir/covid-predictive-analysis/django-projects/COVID-19-Predictive-Analysis \u003c-\u003e . (Pod: covid/covid-19-predictive-analysis-5d644c895b-vmbrr)","time":"2020-07-26T11:23:15+05:30"}
+{"level":"info","msg":"Opening 'http://localhost:6969' as soon as application will be started (timeout: 4m0s)","time":"2020-07-26T11:23:15+05:30"}
+{"level":"info","msg":"DevSpace UI available at: \u001b[1;37mhttp://localhost:8090\u001b[0m","time":"2020-07-26T11:23:15+05:30"}
+{"level":"info","msg":"Starting log streaming for containers that use images defined in devspace.yaml\n","time":"2020-07-26T11:23:16+05:30"}
+{"level":"info","msg":"Port forwarding started on 36038:6969","time":"2020-07-26T11:23:50+05:30"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdevspace-covid\u001b[0m'","time":"2020-07-26T11:33:15+05:30"}
+{"level":"info","msg":"Using namespace '\u001b[1;37mcovid\u001b[0m'","time":"2020-07-26T11:33:15+05:30"}
+{"level":"info","msg":"Building image 'dscr.io/mformihir/covid19predictiveanalysis:ImVu4hU' with engine 'docker'","time":"2020-07-26T11:33:48+05:30"}
+{"level":"info","msg":"Authentication successful (dscr.io)","time":"2020-07-26T11:33:52+05:30"}
+{"level":"warning","msg":"Using CMD statement for injecting restart helper because ENTRYPOINT is missing in Dockerfile and `images.*.entrypoint` is also not configured","time":"2020-07-26T11:33:52+05:30"}
+{"level":"info","msg":"Image pushed to registry (dscr.io)","time":"2020-07-26T11:43:26+05:30"}
+{"level":"info","msg":"Done processing image 'dscr.io/mformihir/covid19predictiveanalysis'","time":"2020-07-26T11:43:26+05:30"}
+{"level":"info","msg":"Deployed helm chart (Release revision: 0)","time":"2020-07-26T11:43:59+05:30"}
+{"level":"info","msg":"Successfully deployed database with helm","time":"2020-07-26T11:43:59+05:30"}
+{"level":"info","msg":"Deployed helm chart (Release revision: 0)","time":"2020-07-26T11:44:19+05:30"}
+{"level":"info","msg":"Successfully deployed covid-19-predictive-analysis with helm","time":"2020-07-26T11:44:19+05:30"}
+{"level":"info","msg":"Port forwarding started on 6969:6969","time":"2020-07-26T11:44:59+05:30"}
+{"level":"info","msg":"Sync started on /home/mformihir/covid-predictive-analysis/django-projects/COVID-19-Predictive-Analysis \u003c-\u003e . (Pod: covid/covid-19-predictive-analysis-d84498d95-qcz87)","time":"2020-07-26T11:45:22+05:30"}
+{"level":"info","msg":"Opening 'http://localhost:6969' as soon as application will be started (timeout: 4m0s)","time":"2020-07-26T11:45:22+05:30"}
+{"level":"info","msg":"DevSpace UI available at: \u001b[1;37mhttp://localhost:8090\u001b[0m","time":"2020-07-26T11:45:22+05:30"}
+{"level":"info","msg":"Starting log streaming for containers that use images defined in devspace.yaml\n","time":"2020-07-26T11:45:24+05:30"}
+{"level":"info","msg":"Port forwarding started on 12261:6969","time":"2020-07-26T11:46:49+05:30"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdevspace-covid\u001b[0m'","time":"2020-07-26T11:50:19+05:30"}
+{"level":"info","msg":"Using namespace '\u001b[1;37mcovid\u001b[0m'","time":"2020-07-26T11:50:19+05:30"}
+{"level":"info","msg":"Skip building image 'app'","time":"2020-07-26T11:50:26+05:30"}
+{"level":"info","msg":"Skipping deployment database","time":"2020-07-26T11:50:34+05:30"}
+{"level":"info","msg":"Deployed helm chart (Release revision: 0)","time":"2020-07-26T11:50:51+05:30"}
+{"level":"info","msg":"Successfully deployed covid-19-predictive-analysis with helm","time":"2020-07-26T11:50:51+05:30"}
+{"level":"info","msg":"Port forwarding started on 8000:8000","time":"2020-07-26T11:50:54+05:30"}
+{"level":"info","msg":"Sync started on /home/mformihir/covid-predictive-analysis/django-projects/COVID-19-Predictive-Analysis \u003c-\u003e . (Pod: covid/covid-19-predictive-analysis-d84498d95-qcz87)","time":"2020-07-26T11:50:57+05:30"}
+{"level":"info","msg":"Opening 'http://localhost:8000' as soon as application will be started (timeout: 4m0s)","time":"2020-07-26T11:50:57+05:30"}
+{"level":"info","msg":"DevSpace UI available at: \u001b[1;37mhttp://localhost:8090\u001b[0m","time":"2020-07-26T11:50:57+05:30"}
+{"level":"info","msg":"Starting log streaming for containers that use images defined in devspace.yaml\n","time":"2020-07-26T11:51:01+05:30"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdevspace-covid\u001b[0m'","time":"2020-07-26T11:52:36+05:30"}
+{"level":"info","msg":"Using namespace '\u001b[1;37mcovid\u001b[0m'","time":"2020-07-26T11:52:36+05:30"}
+{"level":"info","msg":"Building image 'dscr.io/mformihir/covid19predictiveanalysis:CQdbvXR' with engine 'docker'","time":"2020-07-26T11:52:43+05:30"}
+{"level":"info","msg":"Authentication successful (dscr.io)","time":"2020-07-26T11:52:48+05:30"}
+{"level":"warning","msg":"Using CMD statement for injecting restart helper because ENTRYPOINT is missing in Dockerfile and `images.*.entrypoint` is also not configured","time":"2020-07-26T11:52:48+05:30"}
+{"level":"info","msg":"Image pushed to registry (dscr.io)","time":"2020-07-26T11:54:08+05:30"}
+{"level":"info","msg":"Done processing image 'dscr.io/mformihir/covid19predictiveanalysis'","time":"2020-07-26T11:54:08+05:30"}
+{"level":"info","msg":"Skipping deployment database","time":"2020-07-26T11:54:12+05:30"}
+{"level":"info","msg":"Deployed helm chart (Release revision: 0)","time":"2020-07-26T11:54:27+05:30"}
+{"level":"info","msg":"Successfully deployed covid-19-predictive-analysis with helm","time":"2020-07-26T11:54:27+05:30"}
+{"level":"info","msg":"Successfully deployed!","time":"2020-07-26T11:54:27+05:30"}
+{"level":"info","msg":"\r         \nRun: \n- `\u001b[1;37mdevspace open\u001b[0m` to create an ingress for the app and open it in the browser \n- `\u001b[1;37mdevspace enter\u001b[0m` to open a shell into the container \n- `\u001b[1;37mdevspace logs\u001b[0m` to show the container logs\n- `\u001b[1;37mdevspace analyze\u001b[0m` to analyze the space for potential issues\n","time":"2020-07-26T11:54:27+05:30"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdevspace-covid\u001b[0m'","time":"2020-07-26T11:54:39+05:30"}
+{"level":"info","msg":"Using namespace '\u001b[1;37mcovid\u001b[0m'","time":"2020-07-26T11:54:39+05:30"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdevspace-covid\u001b[0m'","time":"2020-07-26T11:58:12+05:30"}
+{"level":"info","msg":"Using namespace '\u001b[1;37mcovid\u001b[0m'","time":"2020-07-26T11:58:12+05:30"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdevspace-covid\u001b[0m'","time":"2020-07-26T12:03:18+05:30"}
+{"level":"info","msg":"Using namespace '\u001b[1;37mcovid\u001b[0m'","time":"2020-07-26T12:03:18+05:30"}
+{"level":"info","msg":"Port forwarding started on 8000:8000","time":"2020-07-26T12:03:31+05:30"}
+{"level":"info","msg":"Successfully opened http://localhost:8000","time":"2020-07-26T12:03:33+05:30"}
+{"level":"info","msg":"Press ENTER to terminate port-forwarding process","time":"2020-07-26T12:03:33+05:30"}

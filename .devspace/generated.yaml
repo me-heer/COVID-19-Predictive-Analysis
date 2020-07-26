@@ -1,4 +1,20 @@
 vars:
+  DB_PASSWORD: root
   DEVSPACE_SPACE_DOMAIN1: covid.devspace.host
 profiles:
-  "": {}
+  "":
+    deployments:
+      covid-19-predictive-analysis:
+        deploymentConfigHash: 1911f855bfb6e712a324a741901cf04e06a68f52b80b31996a2b2e605f3cab8a
+      database:
+        deploymentConfigHash: af119576db148904c5c26ee3d641845c71e15b1fe11911913dc4f08fb015f6ca
+    images:
+      app:
+        imageConfigHash: abcfe3a98dba6c4cffc314b79e30ba61960cc9e3d618401a03618b6c8c109a01
+        dockerfileHash: caa24e9f83a1d84e070028df68475e3b05b1de910e990b516e098d501d5ecb3e
+        contextHash: fd4c703696bc2cf51a91d9484b9b890ad53478e69a4452d80e50a2c054fd129c
+        imageName: dscr.io/mformihir/covid19predictiveanalysis
+        tag: CQdbvXR
+    lastContext:
+      namespace: covid
+      context: devspace-covid

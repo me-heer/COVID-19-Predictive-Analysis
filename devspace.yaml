@@ -1,28 +1,46 @@
 version: v1beta9
 images:
   app:
-    image: covid-analysis-mformihir
+    image: dscr.io/${DEVSPACE_USERNAME}/covid19predictiveanalysis
     preferSyncOverRebuild: true
     injectRestartHelper: true
     appendDockerfileInstructions:
     - USER root
 deployments:
-- name: covid-19-predictive-analysis
+- name: database
+  helm:
+    chart:
+      name: stable/postgresql
+      version: "6.5.9"
+    values:
+      postgresqlDatabase: "db_mysite"
+      postgresqlUsername: "db_user"
+      postgresqlPassword: ${DB_PASSWORD}
+- name: covid-19-predictive-analysis                                      # this line may be different for you
   helm:
     componentChart: true
     values:
       containers:
-      - image: covid-analysis-mformihir
+      - image: dscr.io/${DEVSPACE_USERNAME}/covid19predictiveanalysis  # this line may be different for you
+        env:
+        - name: DB_HOST
+          value: "database-postgresql"
+        - name: DB_NAME
+          value: "db_mysite"
+        - name: DB_USER
+          value: "db_user"
+        - name: DB_PASSWORD
+          value: ${DB_PASSWORD}
       service:
         ports:
-        - port: 6969
+        - port: 8000
 dev:
   ports:
   - imageName: app
     forward:
-    - port: 6969
+    - port: 8000
   open:
-  - url: http://localhost:6969
+  - url: http://localhost:8000
   sync:
   - imageName: app
     excludePaths:
