@@ -8,7 +8,7 @@ before_install:
 - docker-compose build
 - docker-compose up -d
 script:
-- docker-compose run python manage.py test
+- docker-compose run web python manage.py test
 - docker ps
 - docker tag covid-19-predictive-analysis_web registry.heroku.com/covid-analysis-mformihir/web
 - docker tag mysql:5.7 registry.heroku.com/covid-analysis-mformihir/db
