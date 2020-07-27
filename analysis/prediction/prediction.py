@@ -3,13 +3,13 @@ import pandas as pd
 import pickle
 import os
 
-def ml_algorithm():
+def ml_algorithm(last_updated_date):
     output = ""
     module_dir = os.path.dirname(__file__)  # get current directory
     file_path = os.path.join(module_dir, 'nation_level_daily.csv')
     df = pd.read_csv(file_path,parse_dates=['Date'])
     output += "Successfully read csv files. \n"
-    dates = pd.date_range(start="2020-01-30",end="2020-07-07")
+    dates = pd.date_range(start="2020-01-30",end=last_updated_date)
     confirmed = pd.DataFrame()
     confirmed['ds'] = dates
     confirmed['y'] = df[['Daily Deceased']]
