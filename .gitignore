@@ -4,3 +4,4 @@ analysis/__pycache__/**
 covid_analysis/__pycache__/**
 schecduler/__pycache__/**
 .idea/**
+.devspace/**
