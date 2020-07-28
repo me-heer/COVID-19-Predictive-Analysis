@@ -1,0 +1,193 @@
+\documentclass{scrreprt}
+\usepackage{listings}
+\usepackage{underscore}
+\usepackage{graphicx}
+\usepackage[bookmarks=true]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\hypersetup{
+    bookmarks=false,    % show bookmarks bar?
+    pdftitle={Software Requirement Specification},    % title
+    pdfauthor={Jean-Philippe Eisenbarth},                     % author
+    pdfsubject={TeX and LaTeX},                        % subject of the document
+    pdfkeywords={TeX, LaTeX, graphics, images}, % list of keywords
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=blue,       % color of internal links
+    citecolor=black,       % color of links to bibliography
+    filecolor=black,        % color of file links
+    urlcolor=purple,        % color of external links
+    linktoc=page            % only page is linked
+}%
+\def\myversion{1.0 }
+\date{}
+%\title{%
+
+%}
+\usepackage{hyperref}
+\begin{document}
+\thispagestyle{empty}
+\pagenumbering{gobble}
+\begin{titlepage}
+	\begin{flushright}
+	    \rule{16cm}{5pt}\vskip1cm
+	    \begin{bfseries}
+	        \Huge{SOFTWARE REQUIREMENTS\\ SPECIFICATION}\\
+	        \vspace{1.5cm}
+	        for\\
+	        \vspace{1.5cm}
+	        COVID-19 Predictive Analysis\\
+	        \vspace{1.5cm}
+	        \LARGE{Version \myversion}\\
+	        \vspace{1.5cm}
+	        Prepared by : \\
+	        Mihir Joshi\\
+	        Devang Dodiya\\
+	        Nishant Ambaliya\\
+	        \vspace{1.5cm}
+	        Submitted to : Prof. Maulik Dhamecha \\
+	        \vspace{1.5cm}
+	        \today\\
+	    \end{bfseries}
+	\end{flushright}
+\end{titlepage}
+\tableofcontents
+
+\pagenumbering{arabic}
+\chapter{Introduction}
+
+\section{Purpose}
+The purpose of this project is to gain insights into the worldwide disease outbreak and take necessary actions to avoid/improve the situation. This project may help common people to understand the data in a meaningful manner. The main concept of "COVID-19 Predictive Analysis" is to predict future data from existing data of COVID-19 cases.
+
+\section{Intended Audience and Reading Suggestions}
+This SRS is for developers, project managers, users and testers. Further the discussion will provide all the internal, external, functional and also non-functional informations about "COVID-19 Predictive Analysis".
+
+\section{Project Scope}
+"COVID-19 Predictive Analysis" creates a space for Director, Teachers, Students and Office Staffs for maintaining particular programs like - PGD, MIT. 
+\newline
+After getting admitted to a programs a student has been given a registration number, by using which he/she can inter from-fill-up page. It will take his/her personal informations, admitted fee imformations.He will be added as a student of that particuler programs after completing his/her payment process. After that he/she can select course of the program and then pay the fee for that. Student profile will contain all his personal informations, past results, recent result and notifications.
+\newline
+Office staff only post result publicly and also notice. But off course with the permission of Director.  
+\newline
+Directors' main work is to assign teachers to the courses they will take, create teachers profile and approve mark-sheet. He can move a teacher from one course to another. He also can be a teacher and can also can take the courses and perform all the functionality of teacher like- marking papers. He can also directly post notice to the website, teachers and also students.
+\newline
+Teachers' account are created by director. They (Teachers) entry marks of the students, can view all the marks of the students and change it after submitted it to the director. Every student of that particular course will be under the teacher who is assigned to that course. 
+\newline
+\begin{figure}
+    \centering
+    \includegraphics[width=15cm]{COVID-19 Use Case.png}
+    \caption{Entire work-flow (use case diagram)}
+    \label{fig:COVID-19 Predictive Analysis}
+\end{figure}
+\newline
+Figure 1.1 (Entire work-flow) is the overview of the project. Connection of all the entities are dependable to each others.  This gives the simple idea about the functional activities of the project. 
+\newline
+Student cycle, In the Figure 1.1 "Student" takes "Courses" ; "Courses" is guided by "Teachers"; "Teachers" creates "Results". 
+\newline
+Teacher cycle, In the Figure 1.1 "Director" assign "Teachers"; "Teachers" for particular "Courses"; "Director" publish "Results".
+\newline
+So, every entity is vary much interactive with each other.
+
+
+\chapter{Overall Description}
+
+\section{Product Perspective}
+"COVID-19 Predictive Analysis" is use to predict future data from existing data of COVID-19 cases. The data have been stored in the hard file or papers, this website will store all of those in the website. Main goal of this project is to minimize the work and maximize the result of this result processing system.
+
+\section{User Classes and Characteristics}
+"COVID-19 Predictive Analysis" has basically 5 types of users. 
+\begin{itemize}
+\item Governments
+\item Health Organizations
+  \item Doctors
+  \item Patients
+  \item Other peoples
+\end{itemize}
+Governments and Health Organizations use for upcoming case prediction.
+Doctors and Patients use for check prediction from symptoms of covid-19.   
+Other people defines the people who will check prediction of cases in their regions. 
+
+\section{Product Functions}
+"COVID-19 Predictive Analysis" contain analysis phase and prediction phase.
+\begin{itemize}
+\item  Analysis phase
+\item Prediction phase
+\end{itemize}
+
+Before using the main function of the software 'Prediction' by uses, Analysis phase completed by on the existing COVID-19 data. And dynamically over real-time data. 
+\newline
+In the predictions function, it provide a time-series based prediction. In this, it use various data science solutions to predict future data.
+
+
+\section{Operating Environment}
+The website will be operate in any Operating Environment - Mac, Windows, Linux etc. 
+
+\section{Design}
+”COVID-19 Predictive Analysis” activities have 2 steps -
+\begin{itemize}
+    \item Predictions
+    \item Analytic
+\end{itemize}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=15cm]{COVID-19 Predictive Analysis.png}
+    \caption{Prediction Activities}
+    \label{fig:Prediction Activities}
+\end{figure}
+\newpage
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=15cm]{COVID-19 Predictive Analysis (1).png}
+    \caption{Analytic Activities}
+    \label{fig:Analytic Activities}
+\end{figure}
+
+\chapter{System Features}
+"COVID-19 Predictive Analysis" is a covid-19 predictive web software. So the main art of this product is to enter data of covid-19 cases and predicts. 
+
+\section{Description and Priority}
+"COVID-19 Predictive Analysis" has features that are main and also some are sub. But all the feature is necessary for this software.
+\newline
+The features with priority up to down - 
+\begin{enumerate}
+    \item Prediction : This is the goal feature of this software. It is been operated by users.
+    \item Analysis : This is done by data science technique.
+\end{enumerate}
+
+\section{Functional Requirements}
+The "COVID-19 Predictive Analysis" website is being build on Django framework, python language and JavaScript.
+\newline
+Back-End - Django framework, python language.
+\newline
+Libraries - Matplotlib, Pandas, Facebook prophet, pystan.
+\newline
+Development Tools - Jupyter Notebooks, Kaggle Datasets, VSCode, PyCharm.
+\newline
+Font-End - JavaScript.
+
+
+\chapter{Other Nonfunctional Requirements}
+
+\section{Performance Requirements}
+"COVID-19 Predictive Analysis" will be used for result system of COVID-19 cases prediction. So for more interaction Django, python and JavaScript is used. 
+
+\section{Security Requirements}
+No one without registered admin can inter to the admin panel of website. One particular user of a section only can perform his/her particular actions. 
+
+\section{Software Quality Attributes}
+In the development phase also testing and conferences of users is been continued. So that the quality of the software is been maintained and all the requirements are been fulfilled.
+\newline
+Database, logical and also UI test is required. 
+
+\section{Business Rules}
+"COVID-19 Predictive Analysis" is for storing existing data of COVID-19 cases and applying various Data Science techniques for analysis. And publish time-series based prediction results of particular data.
+\newline
+Basically predict future data using various data science solutions. 
+
+
+\chapter{Other Requirements}
+"COVID-19 Predictive Analysis" needs maintenance as it is a long process software. It will need re-factoring and further the requirements can be changed as the field is changing frequently. 
+
+\end{document}
