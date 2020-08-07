@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 
 # Create your views here.
 def index(request):
-    return render(request, 'analysis/index.html')
+    return render(request, 'analysis/index_template.html')
 
 def predict(request):
     user_input = request.GET.get('predict', False)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.7.28)  31 JUL 2020 08:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.7.28)  31 JUL 2020 08:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -494,52 +494,19 @@ Overfull \hbox (8.53578pt too wide) in paragraph at lines 77--78
 chapter 2.
 [5
 
-]
-<COVID-19 Predictive Analysis.png, id=76, 482.40225pt x 794.97pt>
-File: COVID-19 Predictive Analysis.png Graphic file (type png)
-<use COVID-19 Predictive Analysis.png>
-Package pdftex.def Info: COVID-19 Predictive Analysis.png  used on input line 1
-34.
-(pdftex.def)             Requested size: 426.79134pt x 703.36041pt.
-
-Overfull \hbox (8.53578pt too wide) in paragraph at lines 134--135
- [][] 
- []
-
-
-LaTeX Warning: Float too large for page by 135.24019pt on input line 137.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[6]
-<COVID-19 Predictive Analysis (1).png, id=82, 440.847pt x 385.74112pt>
+] [6]
+<COVID-19 Predictive Analysis (1).png, id=81, 440.847pt x 385.74112pt>
 File: COVID-19 Predictive Analysis (1).png Graphic file (type png)
 <use COVID-19 Predictive Analysis (1).png>
 Package pdftex.def Info: COVID-19 Predictive Analysis (1).png  used on input li
-ne 142.
+ne 135.
 (pdftex.def)             Requested size: 426.79134pt x 373.43858pt.
 
-Overfull \hbox (8.53578pt too wide) in paragraph at lines 142--143
+Overfull \hbox (8.53578pt too wide) in paragraph at lines 135--136
  [][] 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-Missing character: There is no û in font cmr10!
-Missing character: There is no ú in font cmr10!
-[7
-
-]
-Missing character: There is no û in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no û in font cmr10!
-Missing character: There is no ú in font cmr10!
-
-Overfull \vbox (11.0pt too high) has occurred while \output is active []
-
-
+[7 <./COVID-19 Predictive Analysis (1).png>]
 chapter 3.
 [8
 
@@ -549,23 +516,23 @@ chapter 4.
 
 ]
 chapter 5.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 193.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 186.
 [10
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 193.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 186.
  (./srs.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 193.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 193.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 186.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 186.
 Package rerunfilecheck Info: File `srs.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 193.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 186.
  ) 
 Here is how much of TeX's memory you used:
- 10254 strings out of 483183
- 176699 string characters out of 5966292
- 561836 words of memory out of 5000000
- 25094 multiletter control sequences out of 15000+600000
+ 10250 strings out of 483183
+ 176521 string characters out of 5966292
+ 561870 words of memory out of 5000000
+ 25090 multiletter control sequences out of 15000+600000
  537527 words of font info for 41 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  43i,7n,72p,10119b,382s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -573,10 +540,10 @@ Here is how much of TeX's memory you used:
 .600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-Output written on srs.pdf (11 pages, 170946 bytes).
+Output written on srs.pdf (11 pages, 177656 bytes).
 PDF statistics:
- 184 PDF objects out of 1000 (max. 8388607)
- 161 compressed objects within 2 object streams
- 35 named destinations out of 1000 (max. 500000)
- 168 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 185 PDF objects out of 1000 (max. 8388607)
+ 162 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 163 words of extra memory for PDF output out of 10000 (max. 10000000)
 
